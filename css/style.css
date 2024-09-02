@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900');
  html{
 	scroll-behavior: smooth;
@@ -17,16 +16,16 @@ body {
 }
 
 a.btn-primary{
-	background-color: #1273eb;
-	border-color: #1273eb;
+	background-color: #eb1212;
+	border-color: #eb1212;
 }
 a.btn-primary:hover{
 	background-color: #323232;
 	border-color: #323232;
 }
 button.btn-primary{
-	background-color: #1273eb;
-	border-color: #1273eb;
+	background-color: #eb1212;
+	border-color: #eb1212;
 }
 button.btn-primary:hover{
 	background-color: #323232;
@@ -34,16 +33,16 @@ button.btn-primary:hover{
 }
 
 a.btn-secondary{
-	background-color: #1273eb;
-	border-color: #1273eb;
+	background-color: #eb1212;
+	border-color: #eb1212;
 }
 a.btn-secondary:hover{
 	background-color: #323232;
 	border-color: #323232;
 }
 button.btn-secondary{
-	background-color: #1273eb;
-	border-color: #1273eb;
+	background-color: #eb1212;
+	border-color: #eb1212;
 }
 button.btn-secondary:hover{
 	background-color: #323232;
@@ -240,7 +239,7 @@ button.btn-secondary:hover{
 }
 .top-nav .navbar-toggler:hover{
 	color: #eb1212;
-	border-color: #1273eb;
+	border-color: #eb1212;
 }
 
 
@@ -349,7 +348,7 @@ button.btn-secondary:hover{
 	position: absolute;
 	left: -15px;
 	top: 0px;
-	color: #1273eb;
+	color: #eb1212;
 }
 .card-img img{
 	width: 100%;
@@ -375,7 +374,7 @@ button.btn-secondary:hover{
 	margin-bottom: 0px;
 }
 .portfolio-main .card .card-body .card-title a{
-	font-size: 20px;
+	font-size: 15px;
 	font-weight: 400;
 	text-transform: capitalize;
 	color: #ffffff;
@@ -419,7 +418,7 @@ button.btn-secondary:hover{
 	transition: all 500ms linear 0s;
 }
 .overlay{
-	background: rgba(18,115,235,0.5);
+	background: rgba(212, 2, 2, 0.5);
 	position: absolute;
 	bottom: -100%;
 	width: 100%;
@@ -439,121 +438,9 @@ button.btn-secondary:hover{
 .portfolio-main .card:hover .overlay{
 	bottom: 0px;
 }
-
-.blog-slide h2{
-	font-weight: 600;
-	font-size: 45px;
-	margin-bottom: 20px;
-	text-align: center;
-}
-
-.post-slide{
-    margin: 0 15px;
-    background: #fff;
-    border-bottom: 4px solid #1273eb;
-}
-.post-slide .post-header{
-    padding: 15px 20px;
-}
-.post-slide .title{
-    margin-bottom: 5px;
-}
-.post-slide .title a{
-    font-size: 15px;
-    color: #323232;    
-    text-transform: capitalize;
-    transition: all 0.4s ease 0s;
-}
-.post-slide .title a:hover{
-    color: #fd6058;
-    text-decoration: none;
-}
-.post-slide .post-bar{
-    margin: 15px 0 0 0;
-    padding: 0;
-    list-style: none;
-}
-.post-slide .post-bar li{
-    display: inline-block;
-    margin-right: 20px;
-    color: #1273eb;
-}
-.post-slide .post-bar li a{
-    font-size: 15px;
-    color: #808080;
-    text-transform: capitalize;
-}
-.post-slide .post-bar li a:hover{
-    text-decoration: none;
-    color: #1273eb;
-}
-.post-slide .post-bar li img{
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-}
-.post-slide .post-bar li i,
-.post-slide .post-bar li img{
-    margin-right: 5px;
-}
-.post-slide .pic{
-    overflow: hidden;
-    position: relative;
-}
-.post-slide .pic:after{
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: rgba(255,255,255,0);
-    transition: all 0.9s ease 0s;
-}
-.post-slide:hover .pic:after{
-    background: rgba(255,255,255,0.2);
-}
-.post-slide .pic img{
-    width: 100%;
-    height: auto;
-    transform: rotate(0deg) scale(1,1);
-    transition: all 0.6s ease-in-out 0s;
-}
-.post-slide:hover .pic img{
-    transform: rotate(10deg) scale(1.5,1.5);
-}
-.post-slide .post-category{
-    padding: 5px 15px;
-    margin: 0;
-    list-style: none;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: #1273eb;
-    z-index: 1;
-}
-.post-slide .post-category li{
-    display: inline-block;
-    text-transform: uppercase;
-}
-.post-slide .post-category li:after{
-    content: " ,";
-    color: #fff;
-}
-.post-slide .post-category li:last-child:after{
-    content: "";
-}
-.post-slide .post-category li a{
-    color: #fff;
-}
-.post-slide .post-category li a:hover{
-    text-decoration: none;
-    color: #333;
-}
-.post-slide .post-description{
-    font-size: 16px;
-    color: #808080;
-    padding: 15px;
+.card:hover{
+	transform: scale(1.07);
+	box-shadow: 0 8px 16px rgba(58, 44, 44, 0.2);
 }
 @media only screen and (max-width: 480px) {
     .post-header .post-bar li{
@@ -563,33 +450,18 @@ button.btn-secondary:hover{
 
 .touch-line{
 	padding: 40px 0px;
-	background: #1273eb;
+	background: #f81818;
 	position: relative;
-	margin-top: 90px;
-}
-.touch-line:before{
-	position: absolute;
-	content: "";
-	z-index: -1;
-	left: 0;
-	top: -46px;
-	bottom: auto;
-	right: auto;
-	z-index: -1;
-	width: 100%;
-	height: 50px;
-	background-size: cover;
-	background-position: 50% 50%;
-	background-image: url(../images/bg-bdr2.png);
 }
 .touch-line p{
-	color: #ffffff;
-	font-size: 15px;
+	color: #151414;
+	font-size: 20px;
+	margin-left: 60px;
 }
 .touch-line a.btn-secondary{
 	background-color: #ffffff;
 	border-color: #ffffff;
-	color: #1273eb;
+	color: #160202;
 }
 .footer { 
 	width:100%; 
@@ -671,7 +543,7 @@ footer p {
 	margin-top:5px;
 	}
 .footer_ul2_amrc li a {
-	color: #1273eb;
+	color: #eb1212;
 	font-size: 12px;
 }
 .bottom_border { 
@@ -704,7 +576,7 @@ footer p {
 	margin-top: 30px;
 }
 .copyright a{
-	color: #1273eb;
+	color: #eb1212;
 	text-decoration: underline;
 }
 .copyright a:hover{
@@ -734,8 +606,8 @@ footer p {
 	text-align:center;
 	}
 .social_footer_ul li a:hover {
-	color: #1273eb; 
-	border:2px solid #1273eb; 
+	color: #eb1212; 
+	border:2px solid #eb1212; 
 }
 
 .footer-social{
@@ -1049,7 +921,7 @@ footer p {
 	text-align: center;
 }
 .breadcrumb-main .breadcrumb{
-	background: #1273eb;
+	background: #eb1212;
 	border-radius: 100px 100px 0px 0px;
 	display: block;
 }
@@ -1096,7 +968,7 @@ footer p {
     position: absolute;
     left: -15px;
     top: 0px;
-    color: #1273eb;
+    color: #eb1212;
 }
 
 .team-members-box{
@@ -1125,8 +997,8 @@ footer p {
     height: auto;
     background: #323232;
     padding: 27px 0;
-    border-left: 5px solid #1273eb;
-	border-right: 5px solid #1273eb;
+    border-left: 5px solid #eb1212;
+	border-right: 5px solid #eb1212;
     box-shadow: 0 15px 25px 0 rgba(3,7,15,0.1);
     position: absolute;
     bottom: 0;
@@ -1134,7 +1006,7 @@ footer p {
     transition: all 0.5s ease 0s;
 }
 .our-team:hover .team-content{
-    background: #1273eb;
+    background: #eb1212;
 }
 .our-team .title{
     font-size: 20px;
@@ -1197,7 +1069,7 @@ footer p {
 }
 .our-team .social li a:hover{
     color: #ffffff;
-	background: #1273eb;
+	background: #eb1212;
 }
 @media only screen and (max-width: 990px){
     .our-team{ margin-bottom: 0px; }
@@ -1243,7 +1115,7 @@ footer p {
 	overflow: hidden;
 }
 .dot-full{
-	background: #1273eb;
+	background: #eb1212;
 	width: 40px;
 	height: 40px;
 	position: absolute;
@@ -1264,7 +1136,7 @@ footer p {
 	opacity: 0;
 }
 .portfolio-item .card:hover .dot-full{
-	background: rgba(18,115,235,0.5);
+	background: rgba(235, 18, 18, 0.5);
 	width: 100%;
 	height: 100%;
 	border-radius: 0px;
@@ -1324,7 +1196,7 @@ footer p {
 	text-align: center;
 }
 .pagination_bar .pagination .page-item .page-link:hover{
-	background: #1273eb;
+	background: #eb1212;
 }
 .portfolio-item h4.card-title a{
 	font-size: 20px;
@@ -1362,7 +1234,7 @@ footer p {
 	color: #ffffff !important;
 }
 .blog-entries .card .card-footer a{
-	color: #1273eb;
+	color: #eb1212;
 }
 .blog-right-side .card{
 	box-shadow: 3px 5px 15px rgba(0,0,0, .15);
@@ -1385,7 +1257,7 @@ footer p {
 	display: inline-block;
 }
 .blog-main .blockquote{
-	border-left: 3px solid #1273eb;
+	border-left: 3px solid #eb1212;
 	padding-left: 20px;
 }
 .blog-main .blockquote p{
@@ -1402,7 +1274,7 @@ footer p {
 	text-align: center;
 }
 .pagination_bar_arrow .pagination .page-item .page-link:hover{
-	background: #1273eb;
+	background: #eb1212;
 }
 .faq-main{
 	padding: 30px 0px;
@@ -1438,7 +1310,7 @@ footer p {
 	font-weight: 600;
 }
 #accordionExample  .accordion-single .card-header h5 button:hover{
-	color: #1273eb;
+	color: #eb1212;
 	text-decoration: none;
 }
 #accordionExample  .accordion-single h5 button[aria-expanded="false"]::before {
@@ -1448,8 +1320,8 @@ footer p {
 	width: 40px;
 	height: 47px;
 	line-height: 47px;
-	background: #1273eb;
-	border: 1px solid #1273eb;
+	background: #eb1212;
+	border: 1px solid #eb1212;
 	border-radius: 3px;
 	font-size: 24px;
 	color: #000000;
@@ -1729,17 +1601,3 @@ footer p {
 		font-size: 14px;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
