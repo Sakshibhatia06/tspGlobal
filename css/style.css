@@ -1493,6 +1493,9 @@ footer p {
 		top: 18px;
 		right: 6px;
 	}
+	.navbar-brand img{
+		width: 200px;
+	}
 	.portfolio-main h2{
 		text-align: center;
 	}
