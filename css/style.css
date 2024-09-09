@@ -450,6 +450,13 @@ button.btn-secondary:hover{
 		height: 30vh;
 		min-height: 300px;
 	}
+	.slider-main .carousel .carousel-item .carousel-caption h3{
+		font-size: 25px;
+		font-weight: 600;
+	}
+	.slider-main .carousel .carousel-item .carousel-caption p{
+		font-size: 10px;
+	}
 }
 
 .touch-line{
