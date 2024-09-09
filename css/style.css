@@ -446,6 +446,10 @@ button.btn-secondary:hover{
     .post-header .post-bar li{
         margin-right: 5px;
     }
+.carousel-item {
+		height: 30vh;
+		min-height: 300px;
+	}
 }
 
 .touch-line{
