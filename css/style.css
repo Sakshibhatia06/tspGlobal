@@ -1545,6 +1545,10 @@ footer p {
 }
 
 @media (min-width:320px) and (max-width:575.98px){
+	.container-scroll{
+	width: 99vw;
+    height: 50vh;
+	}
 	.navbar-expand-lg.top-nav .navbar-nav .nav-link.dropdown-toggle::after{
 		position: absolute;
 		top: 18px;
