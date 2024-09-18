@@ -30,24 +30,6 @@
         });
     });
 
-    // fixed-menu
-    window.addEventListener('scroll', function () {
-        const topNav = document.querySelector('.top-nav');
-        if (window.scrollY > 100) {
-            topNav.classList.add('fixed-menu');
-        } else {
-            topNav.classList.remove('fixed-menu');
-        }
-    });
-    // Handle scroll to add fixed-menu class
-window.addEventListener('scroll', function () {
-    const topNav = document.querySelector('.top-nav');
-    if (window.scrollY > 100) {
-        topNav.classList.add('fixed-menu');
-    } else {
-        topNav.classList.remove('fixed-menu');
-    }
-});
 
 // Close navbar on nav-item click
 const navItems = document.querySelectorAll('.nav-item');
